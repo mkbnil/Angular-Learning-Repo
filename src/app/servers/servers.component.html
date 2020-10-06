@@ -1,11 +1,10 @@
-<label>Server Name</label>
-<!-- Two Way Binding-->
-<input type="text" class="form-control" [(ngModel)] = "serverName">
 
 <button class="btn btn-primary" [disabled] = "!allowNewServer" (click) = "onCreateServer()">Add Server </button>
 
-<p>{{serverCreationStatus}}</p>
+<p *ngIf ="showServerName">Server Created</p>
 
-<p>{{serverName}}</p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor= " let server of servers"></app-server>
+<div *ngFor= " let server of servers"
+[ngStyle] = "{backgroundColor : server > 2 ? 'blue' : 'red'}">Server Created</div>
+
+

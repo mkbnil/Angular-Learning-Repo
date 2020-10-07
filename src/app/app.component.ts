@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mkbinil';
+  featureSelected: string = 'recipe';
+  onFeatureSelected(featreSelected: string){
+    this.featureSelected = featreSelected;
+  }
 }

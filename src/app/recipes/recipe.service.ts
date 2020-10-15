@@ -22,5 +22,8 @@ export class RecipeService{
         this.slService.AddIngredietns(ingredients);
       }
 
+      getRecipe(index: number){
+        return this.recipes.slice()[index];
+      }
       
 }
